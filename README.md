@@ -50,15 +50,17 @@ sudo apt install jq chromium
 Get an API key from ProjectDiscovery Chaos.
 
 Then save it to:
-'''bash
+```bash
 mkdir -p ~/.config/chaos
 echo 'your_api_key_here' > ~/.config/chaos/chaos.key
-,,,
+```
 ---
 
 ## 🧪 Usage
+```bash
 chmod +x ultimate_recon.sh
 ./ultimate_recon.sh
+```
 When prompted, enter either:
 
 A company name (e.g., uber, paypal)
