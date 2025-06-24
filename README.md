@@ -25,40 +25,6 @@ This script performs **end-to-end recon** for a given target (company name or do
 ✅ Easily extendable for notifications & reports
 
 ---
-## 🔐 Chaos API Setup (Optional)
-Get an API key from ProjectDiscovery Chaos.
-
-Then save it to:
-mkdir -p ~/.config/chaos
-echo 'your_api_key_here' > ~/.config/chaos/chaos.key
-
-## 🧪 Usage
-
-chmod +x ultimate_recon.sh
-./ultimate_recon.sh
-When prompted, enter either:
-
-A company name (e.g., uber, paypal)
-
-Or a domain (e.g., example.com)
-
-## 📁 Output
-Results are saved under:
-
-recon/<targetname>_<timestamp>/
-├── subs_unique.txt      # Deduplicated subdomains
-├── resolved.txt         # DNS-resolved domains
-├── live.txt             # Live HTTP/S endpoints
-├── nuclei/vulns.txt     # Vulnerability scan results
-├── screenshots/         # Captures of live domains
-├── summary.txt          # Quick recon summary
-
-## 📢 Optional: Slack/Telegram Notification
-To enable alerting, uncomment and update this in the script:
-
-# curl -X POST -H 'Content-type: application/json' \
-# --data '{"text":"Recon complete for target X"}' \
-# https://hooks.slack.com/services/XXXXX/XXXXX/XXXXX
 
 ## 📦 Requirements
 
@@ -72,11 +38,48 @@ go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 go install github.com/sensepost/gowitness@latest
-```  ← this ends the code block
-
-
+``` 
 
 
 Other dependencies:
 sudo apt install jq chromium
+
+---
+
+## 🔐 Chaos API Setup (Optional)
+Get an API key from ProjectDiscovery Chaos.
+
+Then save it to:
+mkdir -p ~/.config/chaos
+echo 'your_api_key_here' > ~/.config/chaos/chaos.key
+---
+
+## 🧪 Usage
+chmod +x ultimate_recon.sh
+./ultimate_recon.sh
+When prompted, enter either:
+
+A company name (e.g., uber, paypal)
+
+Or a domain (e.g., example.com)
+
+---
+## 📁 Output
+Results are saved under:
+
+recon/<targetname>_<timestamp>/
+├── subs_unique.txt      # Deduplicated subdomains
+├── resolved.txt         # DNS-resolved domains
+├── live.txt             # Live HTTP/S endpoints
+├── nuclei/vulns.txt     # Vulnerability scan results
+├── screenshots/         # Captures of live domains
+├── summary.txt          # Quick recon summary
+
+## 📢 Optional: Slack/Telegram Notification
+To enable alerting, uncomment and update this in the script:
+```bash
+# curl -X POST -H 'Content-type: application/json' \
+# --data '{"text":"Recon complete for target X"}' \
+# https://hooks.slack.com/services/XXXXX/XXXXX/XXXXX
+``` 
 
