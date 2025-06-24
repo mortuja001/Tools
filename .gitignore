@@ -1,0 +1,39 @@
+# === Recon Tool Output ===
+recon/
+*.log
+*.txt
+*.html
+*.json
+*.xml
+
+# === Screenshots ===
+gowitness-report/
+screenshots/
+*.png
+*.jpg
+*.jpeg
+
+# === Nuclei Output ===
+nuclei/
+nuclei-results.txt
+
+# === Chaos API Key (private) ===
+.config/chaos/
+~/.config/chaos/
+!*.md
+
+# === macOS/Linux Trash/Temp Files ===
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# === Python / Go cache (if used later) ===
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.out
+bin/
+pkg/
