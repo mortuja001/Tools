@@ -70,7 +70,7 @@ Or a domain (e.g., example.com)
 ---
 ## 📁 Output
 Results are saved under:
-
+```
 recon/<targetname>_<timestamp>/
 ├── subs_unique.txt      # Deduplicated subdomains
 ├── resolved.txt         # DNS-resolved domains
@@ -78,7 +78,7 @@ recon/<targetname>_<timestamp>/
 ├── nuclei/vulns.txt     # Vulnerability scan results
 ├── screenshots/         # Captures of live domains
 ├── summary.txt          # Quick recon summary
-
+```
 ## 📢 Optional: Slack/Telegram Notification
 To enable alerting, uncomment and update this in the script:
 ```bash
