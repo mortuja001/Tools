@@ -38,6 +38,7 @@ go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 go install github.com/sensepost/gowitness@latest
+```bash
 
 ---
 
