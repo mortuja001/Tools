@@ -85,5 +85,7 @@ To enable alerting, uncomment and update this in the script:
 # curl -X POST -H 'Content-type: application/json' \
 # --data '{"text":"Recon complete for target X"}' \
 # https://hooks.slack.com/services/XXXXX/XXXXX/XXXXX
-``` 
+```
+---
+Reference:
 
